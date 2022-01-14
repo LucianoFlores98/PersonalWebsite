@@ -1,39 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <title>Luciano Adrian Flores</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
+    <script src="https://kit.fontawesome.com/2b8baf337d.js" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+
 </head>
+
 <body>
 
     <div class="container">
 
-        <header class="header-container" id="header">
+        <header class="headerContainer">
 
-            <nav class="nav" id="nav-bar id">
+            <nav class="nav">
 
-                <div class="nav__logo">
+                <div class="nav__logos">
 
                 </div>
 
                 <div class="nav__links">
 
-                        <p><a href="#features" id="nav-link">Características</a></p>
-                        <p><a href="#howWorks" id="nav-link">Como funciona?</a></p>
-                        <p><a href="#prices" id="nav-link">Precios</a></p>                    
+                    <p class="nav__links__link"><a href="#features">Sobre Mí</a></p>
+                    <p class="nav__links__link"><a href="#howWorks">Skills</a></p>
+                    <p class="nav__links__link"><a href="#howWorks">Proyectos</a></p>
+                    <p class="nav__links__link"><a href="#prices">Contacto</a></p>                    
 
                 </div>
+
             </nav>
+            
         </header>
 
-        <main>
+
+        <main class="mainContainer">
+            
+            <div class="cover">
+
+                <video autoplay muted loop id="myVideo">
+                    <source src="./Images/video_particulas.mp4" type="video/mp4">
+                </video>
+
+                <div class="cover__left">
+                    
+                    <div class="cover__heading">
+                        <p>Bienvenido!</p>
+    
+                    </div>
+                    
+                    <div class="cover__logos">
+                        
+                        <i class="fa-brands fa-github fa-3x"></i>
+    
+                        <i class="fa-brands fa-linkedin fa-3x"></i>
+    
+                        <i class="fa-brands fa-instagram fa-3x"></i>
+    
+                    </div>
+
+                </div>
+
+                <div class="cover__right">
+                    
+                    <div class="cover__image">
+                    </div>
+    
+                    <div class="cover__button">
+                        
+                        <button id="myBtn" onclick="myFunction()"><i class="fas fa-pause fa-2x"></i></button>
+                        
+                    </div>
+                    
+                </div>
+
+
+            </div>
+
+            <div class="aboutMe">
+
+            </div>
 
         </main>
     </div>
 
 </body>
+
 </html>

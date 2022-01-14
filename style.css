@@ -1,19 +1,169 @@
-.header-container{
+html{
+  
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
 
-    position: fixed;
-    top: 0;
-    width: 100%;
-    min-height: 60px;
-    background: #fff;
+}
+
+.container{
+
+  height: 2000px;
+  color: #fff;
+}
+
+.headerContainer{
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(3, 2, 3);
 
 }
 
 .nav{
 
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-    padding-top: 10px;
-    justify-content:space-around;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 65px;
+  justify-content:space-between;
+
+}
+
+.nav__links{
+
+  display: flex;
+  flex-grow: 0.5;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav__links__link{
+
+  margin-right: 15px;
+  text-align: center;
+  padding: 10px;
+  transition: all .4s;
+}
+
+.nav__links__link:hover{
+
+  border-radius: 5px;
+  background-color: rgb(133, 0, 77);
+  cursor:pointer;
+
+}
+
+.nav__links__link a {
+
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+
+.nav__links:last-child{
+
+  margin-right: 50px;
+
+}
+
+.mainContainer{
+
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cover{
+
+  width: 100%;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,98,117,0) 50%, rgba(0,0,0,0.7819502801120448) 100%);
+  
+  display:flex;
+
+}
+
+
+#myVideo {
+  
+  max-height: 900px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  
+}
+
+.cover__left{
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cover__heading{
+
+  grid-area: heading;
+  background-color: rgba(255, 0, 0, 0.233);
+  height: 400px;
+}
+
+
+
+.cover__image{
+  grid-area: image;
+  background-color: rgba(0, 0, 255, 0.212);
+  min-width: 300px;
+}
+
+.cover__logos{
+
+  display: flex;
+  grid-area: logos;
+  background-color: rgba(255, 255, 0, 0.164);
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover__logos i {
+
+  margin-right: 50px;
+}
+
+.cover__button{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  grid-area: button;
+  background-color: rgba(0, 128, 0, 0.26);
+}
+
+#myBtn {
+  height: 40px;
+  width: 40px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  margin-bottom: 20px;
+  margin-right: 20px;
+  color: #fff;
+}
+  
+#myBtn:hover {
+  color: black;
+}
+
+.aboutMe{
+  height: 1000px;
+  width: 100%;
+  background-color: #fff;
+}
+
+
+@media only screen and (max-width: 955px) {
+
+
+
 }
