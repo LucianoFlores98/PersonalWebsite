@@ -76,83 +76,211 @@ html{
 }
 
 .cover{
-
   width: 100%;
   background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,98,117,0) 50%, rgba(0,0,0,0.7819502801120448) 100%);
-  
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,98,117,0) 50%, rgba(0,0,0,1) 100%);
   display:flex;
+  height: max-content;
+  flex-basis:content;
+  flex-wrap:wrap;
+  padding: 20px 30px 0px 30px;
 
 }
 
 
 #myVideo {
-  
-  max-height: 900px;
-  position: absolute;
+
+  max-height: 800px;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
-  
 }
 
 .cover__left{
-  width: 65%;
   display: flex;
   flex-direction: column;
+  flex-basis: 500px;
+  flex-wrap: wrap;
+  flex-grow: 2;
 }
 
 .cover__heading{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  grid-area: heading;
-  background-color: rgba(255, 0, 0, 0.233);
-  height: 400px;
+.cover__heading__title{
+  font-family: 'Fjalla One', sans-serif;
+  font-size: clamp(3rem, 10vw + 1rem, 5rem);
+  line-height:1;
+
+}
+
+span::before{
+  
+  content: '';
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  animation: text_changing 2s infinite, glitch 500ms infinite;
+
+}
+
+@keyframes text_changing {
+  
+  0%{
+    content: 'x';
+  }
+
+  50%{
+    content: 'a';
+  }
+
+  100%{
+    content: 'o';
+  }
+}
+
+.cover__heading__text{
+
+  font-size: clamp(0.3rem, 10vw + 1rem, 1.5rem);
+  margin-top: 15px;
+}
+
+.glitch{
+
+  text-shadow: 
+  0.05em 0 0 rgba(255,0,0,.75),
+  -0.25em -.05em 0 rgba(0,255,0,.75),
+  0.25em .05em 0 rgba(0,0,255,.75);
+
+  animation:glitch 500ms infinite;
+
 }
 
 
+.glitch span:first-child {
+  animation: glitch 650ms infinite;
 
-.cover__image{
-  grid-area: image;
-  background-color: rgba(0, 0, 255, 0.212);
-  min-width: 300px;
+  /* color: green; */
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  /* color: red; */
+}
+
+@keyframes glitch {
+  
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+
 }
 
 .cover__logos{
 
   display: flex;
-  grid-area: logos;
-  background-color: rgba(255, 255, 0, 0.164);
-  height: 100px;
+  min-height: 50px;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
 }
 
 .cover__logos i {
 
   margin-right: 50px;
+
+}
+
+.cover__right{
+  
+  display: flex;
+  flex-direction: column;
+  width:auto;
+  flex-grow: 1.5;
+  align-items: flex-end;
+}
+
+
+.cover__image{
+  
+  width: 100%;
+  text-align: center;
+  
+}
+
+.cover__image img {
+
+  border-radius: 48% 52% 46% 54% / 57% 56% 44% 43%;
+  object-fit:cover;
+  height: 300px;
+  width: 300px;
+  border:1px solid rgb(111, 0, 255);
+  box-shadow: 0 0 10px #d8b8f7;
+  
 }
 
 .cover__button{
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  grid-area: button;
-  background-color: rgba(0, 128, 0, 0.26);
+  width: auto;
 }
 
 #myBtn {
+
   height: 40px;
   width: 40px;
   border: none;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0);
-  margin-bottom: 20px;
-  margin-right: 20px;
-  color: #fff;
+  color: rgba(161, 161, 161, 0.747);
+  align-self: flex-end;
+  justify-self: flex-end;
 }
   
 #myBtn:hover {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .aboutMe{
@@ -161,6 +289,12 @@ html{
   background-color: #fff;
 }
 
+#imagita {
+ 
+  width:100%;
+  height: 200px;
+
+}
 
 @media only screen and (max-width: 955px) {
 
