@@ -70,7 +70,7 @@ html{
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  font-size: var(--step--1);
+  font-size: var(--step--2);
 
 }
 
@@ -309,7 +309,7 @@ span::before{
 
 .aboutMe{
 
-  height: 1000px;
+  height:max-content;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   font-weight: bold;
@@ -334,8 +334,25 @@ span::before{
   font-size: var(--step-0);
 }
 
-@media only screen and (max-width: 955px) {
+@media only screen and (max-width: 460px) {
 
+  .nav__logo{
+    display: none;
+  }
 
+  .nav__links{
+    flex-grow: 1;
+    justify-content:space-around;
+  }
+
+  .nav__links__link{
+    margin: 0 0 0 5px;
+  }
+
+  .nav__links:last-child{
+
+    margin-right: 0px;
+  
+  }
 
 }
