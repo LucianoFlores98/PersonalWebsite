@@ -1,3 +1,14 @@
+:root {
+  --step--2: clamp(0.88rem, 0.77rem + 0.54vw, 1.15rem);
+  --step--1: clamp(0.94rem, 0.82rem + 0.57vw, 1.23rem);
+  --step-0: clamp(1.00rem, 0.88rem + 0.61vw, 1.31rem);
+  --step-1: clamp(1.07rem, 0.94rem + 0.65vw, 1.40rem);
+  --step-2: clamp(1.14rem, 1.00rem + 0.69vw, 1.49rem);
+  --step-3: clamp(1.22rem, 1.07rem + 0.74vw, 1.59rem);
+  --step-4: clamp(1.30rem, 1.14rem + 0.79vw, 1.70rem);
+  --step-5: clamp(1.38rem, 1.21rem + 0.84vw, 1.82rem);
+}
+
 html{
   
   font-family: 'Poppins', sans-serif;
@@ -7,8 +18,8 @@ html{
 
 .container{
 
-  height: 2000px;
   color: #fff;
+
 }
 
 .headerContainer{
@@ -59,6 +70,7 @@ html{
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  font-size: var(--step--1);
 
 }
 
@@ -146,7 +158,7 @@ span::before{
 
 .cover__heading__text{
 
-  font-size: clamp(0.3rem, 10vw + 1rem, 1.5rem);
+  font-size: var(--step-2);
   margin-top: 15px;
 }
 
@@ -234,6 +246,10 @@ span::before{
 
 }
 
+.cover__logos:last-child{
+  margin-right: 0;
+}
+
 .cover__right{
   
   display: flex;
@@ -255,9 +271,8 @@ span::before{
 
   border-radius: 48% 52% 46% 54% / 57% 56% 44% 43%;
   object-fit:cover;
-  height: 300px;
-  width: 300px;
-  border:1px solid rgb(111, 0, 255);
+  height: 250px;
+  width: 250px;
   box-shadow: 0 0 10px #d8b8f7;
   
 }
@@ -283,17 +298,40 @@ span::before{
   color: rgb(255, 255, 255);
 }
 
-.aboutMe{
-  height: 1000px;
-  width: 100%;
-  background-color: #fff;
-}
 
-#imagita {
+.division {
  
   width:100%;
   height: 200px;
+  
+}
 
+
+.aboutMe{
+
+  height: 1000px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+
+}
+
+.bioContainer{
+  
+  width: min(90%,1000px);
+  margin-inline: auto;
+}
+
+.bioContainer__title{
+ 
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: var(--step-2);
+}
+
+.bioContainer__content{
+  font-size: var(--step-0);
 }
 
 @media only screen and (max-width: 955px) {
