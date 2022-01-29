@@ -282,7 +282,7 @@ span::before{
   width: auto;
 }
 
-#myBtn {
+#Btn_Video {
 
   height: 40px;
   width: 40px;
@@ -294,15 +294,18 @@ span::before{
   justify-self: flex-end;
 }
   
-#myBtn:hover {
+#Btn_Video:hover {
   color: rgb(255, 255, 255);
 }
 
+#i_play{
+  display: none;
+}
 
 .division {
  
   width:100%;
-  height: 200px;
+  height: 175px;
   
 }
 
@@ -318,6 +321,10 @@ span::before{
 
 .bioContainer{
   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   width: min(90%,1000px);
   margin-inline: auto;
 }
@@ -326,12 +333,97 @@ span::before{
  
   text-align: center;
   font-weight: bold;
-  margin-bottom: 10px;
   font-size: var(--step-2);
 }
 
 .bioContainer__content{
   font-size: var(--step-0);
+}
+
+.bioContainer__content p{
+  margin-top: 15px;
+
+}
+
+#CVContainer{
+  
+  display: flex;
+  justify-content: center;
+  position: fixed;
+
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.CV__doc{
+  
+  width: min(80%,1000px);  
+  height: 100vh;
+  
+}
+
+.CVButton{
+
+  background-color: rgb(99, 4, 48);
+  border: none;
+  color: #fff;
+
+  padding: 10px 20px;
+  margin: 20px auto;
+}
+
+.CVButton:hover{
+
+  cursor: pointer;
+
+}
+
+#CVButton-close{
+  position: fixed;
+  top: 10px;
+  right: 20px;
+
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  color: #fff;
+
+  height: 50px;
+  width: 50px;
+}
+
+#CVButton-close:hover{
+  
+  cursor: pointer;
+
+}
+
+.skills{
+
+  width: auto;
+  height: 1000px;
+  background-color: rgb(102, 0, 43);
+}
+
+.skills__title{
+ 
+  text-align: center;
+  font-weight: bold;
+  font-size: var(--step-2);
+}
+
+.skills__main{
+
+  margin-top: 300px;
+  width: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: var(--step-2);
 }
 
 @media only screen and (max-width: 460px) {
