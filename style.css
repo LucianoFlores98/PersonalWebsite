@@ -13,6 +13,7 @@ html{
   
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
+  scroll-behavior: smooth;
 
 }
 
@@ -60,7 +61,8 @@ html{
 .nav__links__link:hover{
 
   border-radius: 5px;
-  background-color: rgb(133, 0, 77);
+  background-color: rgb(51, 0, 40);
+
   cursor:pointer;
 
 }
@@ -332,7 +334,7 @@ span::before{
 .bioContainer__title{
  
   text-align: center;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: var(--step-2);
 }
 
@@ -369,61 +371,186 @@ span::before{
 }
 
 .CVButton{
+  display: none;
+}
 
-  background-color: rgb(99, 4, 48);
+.CVDownload{
+
+  display: block;
+  background-color: rgb(223, 134, 0);
   border: none;
   color: #fff;
+  text-decoration: none;
+  font-weight: normal;
+
 
   padding: 10px 20px;
   margin: 20px auto;
-}
-
-.CVButton:hover{
-
-  cursor: pointer;
-
-}
-
-#CVButton-close{
-  position: fixed;
-  top: 10px;
-  right: 20px;
-
-  background-color: rgba(255, 255, 255, 0);
-  border: none;
-  color: #fff;
-
-  height: 50px;
-  width: 50px;
-}
-
-#CVButton-close:hover{
-  
-  cursor: pointer;
 
 }
 
 .skills{
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   width: auto;
-  height: 1000px;
-  background-color: rgb(102, 0, 43);
+  height: max-content;
+  background-color: rgb(51, 0, 40);
+
 }
 
 .skills__title{
  
   text-align: center;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: var(--step-2);
+
 }
 
 .skills__main{
 
-  margin-top: 300px;
-  width: auto;
+  margin-top: 20px;
+  width: 800px;
   text-align: center;
-  font-weight: bold;
-  font-size: var(--step-2);
+  
+  display: grid; 
+  grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr); 
+  grid-template-rows: 0.6fr 0.5fr; 
+  gap: 23px 35px; 
+  grid-template-areas: 
+  "skills__backend skills__frontend"
+  "skills__miscellaneous skills__miscellaneous"; 
+  justify-items: stretch; 
+  align-items: stretch; 
+
+}
+  
+  
+.skills__backend {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 200px;
+
+  background-color: rgba(0, 0, 0, 0.664);
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+
+}
+
+
+.skills__frontend {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 200px;
+
+  background-color: rgba(0, 0, 0, 0.664);
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+
+}
+
+.skills__miscellaneous {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 200px;
+
+  grid-area: skills__miscellaneous; 
+  background-color: rgba(0, 0, 0, 0.664);
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+
+}
+
+.skill{
+
+
+  width: 100px;
+  height: 100px;
+
+}
+
+.skill i{
+
+  transition: all .2s;
+
+}
+
+.skill i:hover{
+  text-shadow: 0 0 10px rgb(236, 162, 255);
+  
+}
+
+.skill p{
+
+  margin-top: 10px;
+
+}
+
+.projects{
+
+  height:max-content;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.division2{
+
+  margin-top: 40px;
+  width: 100%;
+  height: 175px;
+
+}
+
+@media only screen and (min-width: 850px) {
+
+  .CVDownload{
+    display: none;
+  }
+
+  .CVButton{
+
+    display: block;
+    background-color: rgb(223, 134, 0);
+    border: none;
+    color: #fff;
+  
+    padding: 10px 20px;
+    margin: 20px auto;
+  }
+  
+  .CVButton:hover{
+  
+    cursor: pointer;
+  
+  }
+  
+  #CVButton-close{
+    position: fixed;
+    top: 10px;
+    right: 20px;
+  
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #fff;
+  
+    height: 50px;
+    width: 50px;
+  }
+  
+  #CVButton-close:hover{
+    
+    cursor: pointer;
+  
+  }
+  
 }
 
 @media only screen and (max-width: 460px) {
