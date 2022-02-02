@@ -331,11 +331,13 @@ span::before{
   margin-inline: auto;
 }
 
-.bioContainer__title{
+.section__title{
  
   text-align: center;
   font-weight: bolder;
   font-size: var(--step-2);
+  margin-top: 20px;
+
 }
 
 .bioContainer__content{
@@ -401,27 +403,18 @@ span::before{
 
 }
 
-.skills__title{
- 
-  text-align: center;
-  font-weight: bolder;
-  font-size: var(--step-2);
-
-}
-
 .skills__main{
 
   margin-top: 20px;
-  width: 800px;
   text-align: center;
   
-  display: grid; 
-  grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr); 
-  grid-template-rows: 0.6fr 0.5fr; 
-  gap: 23px 35px; 
-  grid-template-areas: 
-  "skills__backend skills__frontend"
-  "skills__miscellaneous skills__miscellaneous"; 
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
+  
+  grid-template-rows: minmax(100px, 0.5fr) minmax(100px, 0.5fr);
+
+  gap: 90px 45px; 
+
   justify-items: stretch; 
   align-items: stretch; 
 
@@ -431,28 +424,30 @@ span::before{
 .skills__backend {
 
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  height: 200px;
+  height: max-content;
 
   background-color: rgba(0, 0, 0, 0.664);
   border: 2px solid #ffffff;
   border-radius: 30px;
-
+  padding: 30px;
 }
 
 
 .skills__frontend {
 
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  height: 200px;
+  height: max-content;
 
   background-color: rgba(0, 0, 0, 0.664);
   border: 2px solid #ffffff;
   border-radius: 30px;
-
+  padding: 30px;
 }
 
 .skills__miscellaneous {
@@ -460,13 +455,16 @@ span::before{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 200px;
-
-  grid-area: skills__miscellaneous; 
+  height: max-content;
+  flex-wrap: wrap;
+ 
   background-color: rgba(0, 0, 0, 0.664);
   border: 2px solid #ffffff;
   border-radius: 30px;
+  padding: 30px;
 
+  
+  grid-column: 1/3;
 }
 
 .skill{
@@ -474,7 +472,6 @@ span::before{
 
   width: 100px;
   height: 100px;
-
 }
 
 .skill i{
@@ -494,6 +491,14 @@ span::before{
 
 }
 
+.division2{
+
+  margin-top: 100px;
+  width: 100%;
+  height: 175px;
+  
+}
+
 .projects{
 
   height:max-content;
@@ -501,12 +506,13 @@ span::before{
   color: rgb(255, 255, 255);
 }
 
-.division2{
-
-  margin-top: 40px;
-  width: 100%;
-  height: 175px;
-
+.projects__main{
+  height: 1000px;
+  margin-top: 300px;
+  width: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: var(--step-2);
 }
 
 @media only screen and (min-width: 850px) {
@@ -551,6 +557,27 @@ span::before{
   
   }
   
+}
+
+@media only screen and (max-width: 790px){
+
+  .skills__main{
+
+    margin: 20px 10px 20px 10px;
+    gap: 170px 20px; 
+
+  }
+
+  .skills__backend{
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .skills__frontend{
+    flex-direction: column;
+    padding: 10px;
+  }
+
 }
 
 @media only screen and (max-width: 460px) {
