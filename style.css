@@ -496,6 +496,7 @@ span::before{
   margin-top: 100px;
   width: 100%;
   height: 175px;
+  margin-bottom: -1px;
   
 }
 
@@ -503,17 +504,75 @@ span::before{
 
   height:max-content;
   background-color: rgb(0, 0, 0);
+  background-image: url(./Images/triangles_without_shadow.svg);
   color: rgb(255, 255, 255);
+
 }
 
 .projects__main{
-  height: 1000px;
-  margin-top: 300px;
-  width: auto;
-  text-align: center;
-  font-weight: bold;
-  font-size: var(--step-2);
+  
+  display: flex;
+  flex-wrap: wrap;
+  width: min(90%,1000px);
+  margin-inline: auto;
+
+
+  justify-content: space-evenly;
+
 }
+
+.projectCard{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin: 50px;
+  height: 400px;
+  width: 300px;
+  border-radius: 10px;
+
+}
+.projectCard__image{
+  height: 190px;
+}
+.projectCard__image img{
+  object-fit:cover;
+}
+
+.projectCard__content{
+  
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.36738445378151263) 100%);
+  padding: 10px;
+
+}
+
+.projectCard__buttons{
+  
+  display: flex;
+  background-color: beige;
+
+}
+
+.projectCard__buttons__button{
+
+  height: 45px;
+  flex-basis: 50%;
+  border-style: none;
+  background-color: rgb(0, 133, 60);
+  color: #fff;
+  font-weight: bolder;
+}
+
+.projectCard__buttons__button-black{
+
+  background-color: rgb(118, 0, 141);
+
+
+ }
 
 @media only screen and (min-width: 850px) {
 
