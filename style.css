@@ -110,7 +110,7 @@ html{
 
 #myVideo {
 
-  max-height: 800px;
+  max-height: 1080px;
   position: fixed;
   top: 0;
   left: 0;
@@ -370,6 +370,7 @@ p span::before{
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(8px);
+  z-index: 250;
 }
 
 .CV__doc{
@@ -541,8 +542,6 @@ p span::before{
   height: max-content;
   width: 300px;
 
-  backdrop-filter: var(--filter-blur);
-
   border-radius: 20px;
 
   z-index: 100;
@@ -661,6 +660,7 @@ p span::before{
   display: flex;
   flex-direction: column;
   height: 250px;
+  background-color: rgba(0, 0, 0, 0.76);
 
   padding: 10px;
 
@@ -696,8 +696,8 @@ p span::before{
   background-color: beige;
   font-size: var(--step--2);
   height: 45px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+/*   border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; */
 }
 
 .projectCard__buttons__button{
@@ -709,7 +709,7 @@ p span::before{
   color: #fff;
   font-weight: bolder;
   transition: .4s;
-  border-bottom-left-radius: 20px;
+/*   border-bottom-left-radius: 20px; */
 
 }
 
@@ -728,8 +728,8 @@ p span::before{
 .projectCard__buttons__button-2{
 
   background-color: rgb(90, 0, 71);
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 20px;
+/*   border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 20px; */
 
 }
 
@@ -743,8 +743,6 @@ p span::before{
   box-shadow: 0 0px 10px rgb(196, 0, 153), 0 0 40px rgb(196, 0, 153), 0 0 80px rgb(196, 0, 153);
 
 }
-
-
 
 
 @media only screen and (min-width: 850px) {
