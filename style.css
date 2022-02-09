@@ -110,7 +110,7 @@ html{
 
 #myVideo {
 
-  max-height: 1080px;
+  max-height: 800px;
   position: fixed;
   top: 0;
   left: 0;
@@ -563,14 +563,14 @@ p span::before{
 
 }
 
-.projectCard span{
+.projectCard > span{
 
   position: absolute;
   display: block;
 
 }
 
-.projectCard span:nth-child(1){
+.projectCard > span:nth-child(1){
 
   top: 0;
   left: -100%;
@@ -580,14 +580,14 @@ p span::before{
 
 }
 
-.projectCard:hover span:nth-child(1){
+.projectCard:hover > span:nth-child(1){
 
   left: 100%;
   transition: 1s;
 
 }
 
-.projectCard span:nth-child(3){
+.projectCard > span:nth-child(3){
 
   bottom: 0;
   right: -100%;
@@ -597,14 +597,14 @@ p span::before{
 
 }
 
-.projectCard:hover span:nth-child(3){
+.projectCard:hover > span:nth-child(3){
 
   right: 100%;
   transition: 1s;
   transition-delay: 0.5s;
 }
 
-.projectCard span:nth-child(2){
+.projectCard > span:nth-child(2){
 
   top: -100%;
   right: 0;
@@ -614,7 +614,7 @@ p span::before{
 
 }
 
-.projectCard:hover span:nth-child(2){
+.projectCard:hover > span:nth-child(2){
 
   top: 100%;
   transition: 1s;
@@ -622,7 +622,7 @@ p span::before{
 
 }
 
-.projectCard span:nth-child(4){
+.projectCard > span:nth-child(4){
 
   bottom: -100%;
   left: 0;
@@ -632,7 +632,7 @@ p span::before{
 
 }
 
-.projectCard:hover span:nth-child(4){
+.projectCard:hover > span:nth-child(4){
 
   bottom: 100%;
   transition: 1s;
@@ -641,7 +641,7 @@ p span::before{
 
 .projectCard__image{
   
-  height: 188px;
+  height: 150px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 
@@ -659,7 +659,7 @@ p span::before{
   
   display: flex;
   flex-direction: column;
-  height: 250px;
+  height: 170px;
   background-color: rgba(0, 0, 0, 0.76);
 
   padding: 10px;
@@ -675,8 +675,7 @@ p span::before{
 
 .projectCard__content__techs{
 
-  font-size: var(--step--2);
-  line-height: 1;
+  line-height: 1.50;
   font-style: italic;
   color: rgb(207, 207, 207);
 
@@ -744,6 +743,40 @@ p span::before{
 
 }
 
+.font-pink{
+
+  color: rgb(255, 0, 170);
+
+}
+
+.font-lightblue{
+
+  color: rgb(138, 237, 255);
+
+}
+
+.font-orange{
+  color: rgb(255, 179, 37);
+}
+
+#division-orange{
+  margin-top: 50px;
+  margin-bottom: -10px;
+
+}
+
+.contact{
+
+  height:max-content;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+
+}
+
+.contact__main{
+
+  height: 700px;
+}
 
 @media only screen and (min-width: 850px) {
 
@@ -787,6 +820,15 @@ p span::before{
   
   }
   
+}
+
+
+@media only screen and (min-width: 1400px){
+
+  #myVideo{
+    max-height: 1500px;
+  }
+
 }
 
 @media only screen and (max-width: 790px){
