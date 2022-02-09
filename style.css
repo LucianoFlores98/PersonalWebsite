@@ -1,4 +1,6 @@
 :root {
+
+    /*font sizing*/
   --step--2: clamp(0.88rem, 0.77rem + 0.54vw, 1.15rem);
   --step--1: clamp(0.94rem, 0.82rem + 0.57vw, 1.23rem);
   --step-0: clamp(1.00rem, 0.88rem + 0.61vw, 1.31rem);
@@ -7,6 +9,8 @@
   --step-3: clamp(1.22rem, 1.07rem + 0.74vw, 1.59rem);
   --step-4: clamp(1.30rem, 1.14rem + 0.79vw, 1.70rem);
   --step-5: clamp(1.38rem, 1.21rem + 0.84vw, 1.82rem);
+
+  --filter-blur: blur(3px);
 }
 
 html{
@@ -29,17 +33,18 @@ html{
   top: 0;
   width: 100%;
   background-color: rgb(3, 2, 3);
+  z-index: 200;
 
 }
 
 .nav{
 
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: 65px;
   justify-content:space-between;
-
 }
 
 .nav__links{
@@ -73,6 +78,7 @@ html{
   text-decoration: none;
   font-weight: bold;
   font-size: var(--step--2);
+
 
 }
 
@@ -133,7 +139,7 @@ html{
 
 }
 
-span::before{
+p span::before{
   
   content: '';
   text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
@@ -266,7 +272,7 @@ span::before{
   
   width: 100%;
   text-align: center;
-  
+
 }
 
 .cover__image img {
@@ -275,9 +281,10 @@ span::before{
   object-fit:cover;
   height: 250px;
   width: 250px;
-  box-shadow: 0 0 10px #d8b8f7;
+  box-shadow: 0 0 40px #d8b8f75e;
   
 }
+
 
 .cover__button{
   display: flex;
@@ -527,17 +534,126 @@ span::before{
   flex-direction: column;
   justify-content: space-between;
 
+  overflow: hidden;
+  position: relative;
+
   margin-top: 30px;
   height: max-content;
   width: 300px;
-  border-radius: 10px;
+
+  backdrop-filter: var(--filter-blur);
+
+  border-radius: 20px;
+
+  z-index: 100;
+}
+
+.projectCard:hover{
+
+  cursor:default;
+
+  box-shadow: 0 0px 10px rgb(150, 0, 219), 0 0 40px rgb(150, 0, 219), 0 0 80px rgb(150, 0, 219),inset 0 22px 56px -36px rgba(150, 0, 219, .5), 
+  inset 0 4px 5px -4px rgba(150, 0, 219, 1), 
+  inset 0 -31px 34px -32px rgba(150, 0, 219, .3), 
+  inset 0 39px 50px -34px rgba(150, 0, 219, .3), 
+  inset 0 2px 9px rgba(150, 0, 219, .3), 
+  inset 0 1px 10px rgba(150, 0, 219, .2);
+
+  transition: 0.5s;
+  transition-delay: 1s;
 
 }
-.projectCard__image{
-  height: 200px;
+
+.projectCard span{
+
+  position: absolute;
+  display: block;
+
 }
+
+.projectCard span:nth-child(1){
+
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgb(150, 0, 219));
+
+}
+
+.projectCard:hover span:nth-child(1){
+
+  left: 100%;
+  transition: 1s;
+
+}
+
+.projectCard span:nth-child(3){
+
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(270deg, transparent, rgb(150, 0, 219));
+
+}
+
+.projectCard:hover span:nth-child(3){
+
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.projectCard span:nth-child(2){
+
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgb(150, 0, 219));
+
+}
+
+.projectCard:hover span:nth-child(2){
+
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+
+}
+
+.projectCard span:nth-child(4){
+
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, rgb(150, 0, 219));
+
+}
+
+.projectCard:hover span:nth-child(4){
+
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+.projectCard__image{
+  
+  height: 188px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+}
+
 .projectCard__image img{
+
   object-fit:cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
 }
 
 .projectCard__content{
@@ -546,27 +662,32 @@ span::before{
   flex-direction: column;
   height: 250px;
 
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.36738445378151263) 100%);
   padding: 10px;
 
 }
 
 .projectCard__content__title{
+
   font-weight: bolder;
   font-size: var(--step-3);
+
 }
 
 .projectCard__content__techs{
+
   font-size: var(--step--2);
   line-height: 1;
   font-style: italic;
   color: rgb(207, 207, 207);
+
 }
 
 .projectCard__content__text{
+
   font-size: var(--step--1);
   line-height: 1;
   margin-top: 10px;
+
 }
 
 .projectCard__buttons{
@@ -575,8 +696,8 @@ span::before{
   background-color: beige;
   font-size: var(--step--2);
   height: 45px;
-
-
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .projectCard__buttons__button{
@@ -584,11 +705,11 @@ span::before{
   height: 45px;
   flex-basis: 50%;
   border-style: none;
-  background-color: rgb(0, 88, 40);
+  background-color: rgb(0, 114, 61);
   color: #fff;
   font-weight: bolder;
   transition: .4s;
-
+  border-bottom-left-radius: 20px;
 
 }
 
@@ -606,21 +727,25 @@ span::before{
 
 .projectCard__buttons__button-2{
 
-  background-color: rgb(51, 0, 40);
+  background-color: rgb(90, 0, 71);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 20px;
 
-
- }
+}
 
  
 .projectCard__buttons__button-2:hover{
 
   cursor: pointer;
 
-  background-color: rgb(186, 0, 223);
+  background-color: rgb(196, 0, 153);
 
-  box-shadow: 0 0px 10px rgb(186, 0, 223), 0 0 40px rgb(186, 0, 223), 0 0 80px rgb(186, 0, 223);
+  box-shadow: 0 0px 10px rgb(196, 0, 153), 0 0 40px rgb(196, 0, 153), 0 0 80px rgb(196, 0, 153);
 
 }
+
+
+
 
 @media only screen and (min-width: 850px) {
 
