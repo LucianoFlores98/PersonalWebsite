@@ -1,5 +1,7 @@
 <?php
 
+//NO SE USA ACTUALMENTE PORQUE GITHUB PAGES NO ADMITE PHP
+
 if (!isset($_POST['submit'] )) {
     echo 'ERROR, necesitas enviar el formulario!';
 }

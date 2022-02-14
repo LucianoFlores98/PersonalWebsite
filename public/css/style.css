@@ -818,7 +818,7 @@ html{
 .contact__main{
 
   height: max-content;
-  width: min(95%,1000px);
+  width: min(95%,800px);
   margin-inline: auto;
 
 }
@@ -1034,7 +1034,6 @@ html{
   
 }
 
-
 @media only screen and (min-width: 1400px){
 
   #myVideo{
@@ -1124,4 +1123,12 @@ html{
     padding: 15px 0px;
     width: 100%;
   }
+}
+
+@media only screen and (max-width: 400px) {
+
+  .division2{
+    margin-top: 210px;
+  }
+
 }
