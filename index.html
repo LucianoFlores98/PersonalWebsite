@@ -34,7 +34,11 @@
 
                 <div class="nav__links">
 
-                    <p class="nav__links__link"><a href="#aboutMe">Sobre Mí</a></p>
+                    <p class="nav__links__link">
+                        <a href="#aboutMe">
+                        Sobre Mí
+                        </a>
+                    </p>
                     <p class="nav__links__link"><a href="#skills">Skills</a></p>
                     <p class="nav__links__link"><a href="#projects">Proyectos</a></p>
                     <p class="nav__links__link"><a href="#contact">Contacto</a></p>
@@ -80,7 +84,7 @@
                 <div class="cover__right">
 
                     <div class="cover__image">
-                        <img src="./Images/yo2.jfif" alt="profile pic">
+                        <img src="./Images/profile.jfif" alt="profile pic">
                     </div>
 
                     <div class="cover__button">
@@ -96,7 +100,7 @@
 
             <div class="aboutMe" id="aboutMe">
 
-                <img src="./Images/curvita_prueba.svg" alt="" class="division">
+                <img src="./Images/division_black.svg" alt="" class="division">
 
                 <div class="bioContainer">
                     <div class="section__title">
@@ -222,7 +226,7 @@
                     </div>
                 </div>
                 
-                <img src="./Images/division_black_i.svg" class="division2" alt="">
+                <img src="./Images/division_black2.svg" class="division2" alt="">
             </div>
             
             <div class="projects" id="projects">
@@ -312,20 +316,76 @@
 
                 </div>
 
-                <img src="./Images/division_orange.svg" alt="" class="division" id="division-orange">
+                <img src="./Images/division_white2.svg" alt="" class="division" id="division-orange">
             </div>
 
             <div class="contact" id="contact">
                 
                 <div class="section__title">
-                    <h2>Contacto (en proceso 😅)</h2>
+                    <h2>Contacto</h2>
                 </div>
 
                 <div class="contact__main">
+                    <form id="contact-form" class="contact__form" method="post" action="mailto:lucianof603@gmail.com">
+
+                        <div class="user-info">
+
+                            <div class="input-group">
+                                <label id="name-label" for="name" class="input-group__label">Tu nombre</label>
+                                <input id="name" type="text" class="input-group__input">
+                            </div>
+    
+                            <div class="input-group">
+    
+                                <label id="email-label" for="email" class="input-group__label">Tu Email</label>
+                                <input id="email" type="email" class="input-group__input">
+            
+                            </div>
+
+                        </div>
+
+                        <div class="input-group">
                     
+                            <label for="email-subject" class="input-group__label">Asunto</label>
+                            <input id="email-subject" type="text" class="input-group__input">
+        
+                        </div>
+
+                        <div class="input-group-textArea">
+
+                            <label for="otras_actividades" class="input-group__label">Tu mensaje:</label>
+        
+                            <textarea name="message" id="otras_actividades" class="input-group-textArea__textArea" rows="5"></textarea>
+        
+                        </div>
+
+                        <button class="form-button" id="submit" type="submit">Enviar</button>
+                    </form>
                 </div>
             </div>
         </main>
+
+        <footer class="footerContainer">
+
+            <img src="./Images/footer_end.svg" alt="division_footer" class="division">
+            
+            <div class="footer_main">
+                <div class="footer__left">
+                    <p>© Luciano Adrian Flores | 2022</p>
+                </div>
+                <div class="footer__right">
+                    <div class="cover__logos">
+
+                        <a href="https://github.com/LucianoFlores98" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
+
+                        <a href="https://www.linkedin.com/in/luciano-flores/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a> 
+
+                        <a href="https://www.instagram.com/luciano_floress/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
 </body>

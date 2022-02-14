@@ -61,15 +61,14 @@ html{
   text-align: center;
   padding: 10px;
   transition: all .4s;
+  border-radius: 5px;
+  
+  cursor: pointer;
 }
 
 .nav__links__link:hover{
 
-  border-radius: 5px;
-  background-color: rgb(51, 0, 40);
-
-  cursor:pointer;
-
+  animation: button_purple 2s infinite;
 }
 
 .nav__links__link a {
@@ -79,13 +78,38 @@ html{
   font-weight: bold;
   font-size: var(--step--2);
 
-
 }
 
 .nav__links:last-child{
 
   margin-right: 50px;
 
+}
+
+@keyframes button_purple {
+
+  0%{
+
+    background-color: rgb(196, 0, 153);
+
+    box-shadow: 0 0px 10px rgb(196, 0, 153), 0 0 40px rgb(196, 0, 153), 0 0 80px rgb(196, 0, 153);
+  }
+
+  25%{
+    
+  }
+
+  50%{
+    background-color: rgba(196, 0, 154, 0.562);
+
+    box-shadow: 0 0px 10px rgba(196, 0, 154, 0.562), 0 0 40px rgba(196, 0, 154, 0.562);
+  }
+
+  100%{
+    background-color: rgb(196, 0, 153);
+
+    box-shadow: 0 0px 10px rgb(196, 0, 153), 0 0 40px rgb(196, 0, 153), 0 0 80px rgb(196, 0, 153);
+  }
 }
 
 .mainContainer{
@@ -139,7 +163,7 @@ html{
 
 }
 
-p span::before{
+p > span::before{
   
   content: '';
   text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
@@ -182,13 +206,13 @@ p span::before{
 }
 
 
-.glitch span:first-child {
+.glitch > span:first-child {
   animation: glitch 650ms infinite;
 
   /* color: green; */
 }
 
-.glitch span:last-child {
+.glitch > span:last-child {
   animation: glitch 375ms infinite;
   /* color: red; */
 }
@@ -253,19 +277,22 @@ p span::before{
   margin-right: 50px;
   text-decoration: none;
   color: #fff;
-
+  transition: .7s;
 }
 
 .cover__logos > a:hover{
 
-  text-shadow: 0 0px 10px rgb(255, 255, 255), 0 0 25px rgb(255, 255, 255), 0 0 25px rgb(255, 255, 255);
-
+  text-shadow: 0 0px 15px #fa0068, 0 0 30px rgb(159, 0, 173), 0 0 30px rgb(45, 0, 247);
+  background-color: transparent;
 }
 
 .cover__logos:last-child{
   margin-right: 0;
 }
 
+.cover__logos a:last-child{
+  margin-right: 0;
+}
 
 
 .cover__right{
@@ -308,7 +335,7 @@ p span::before{
   border: none;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0);
-  color: rgba(161, 161, 161, 0.747);
+  color: rgba(161, 161, 161, 0.616);
   align-self: flex-end;
   justify-self: flex-end;
 }
@@ -392,10 +419,15 @@ p span::before{
   display: none;
 }
 
+.CVButton:hover{
+  animation: button_yellow 1s infinite;
+  color: rgb(180, 168, 0);
+}
+
 .CVDownload{
 
   display: block;
-  background-color: rgb(223, 134, 0);
+  background-color:rgba(255, 193, 59, 0.959);
   border: none;
   color: #fff;
   text-decoration: none;
@@ -407,6 +439,10 @@ p span::before{
 
 }
 
+.CVDownload:hover{
+  animation: button_yellow 1s infinite;
+  color: rgb(180, 168, 0);
+}
 .skills{
 
   display: flex;
@@ -776,15 +812,184 @@ p span::before{
 .contact{
 
   height:max-content;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(247, 247, 247);
   color: rgb(0, 0, 0);
 
 }
 
 .contact__main{
 
-  height: 700px;
+  height: max-content;
+  width: min(90%,1000px);
+  margin-inline: auto;
 
+}
+
+.contact__form{
+  
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  padding: 30px 35px;
+  margin: 40px;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 15px 10px 30px rgba(77, 77, 77, 0.541);
+
+  color: #fff;
+  font-weight: bold;
+}
+
+.user-info{
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input-group{
+
+  margin-bottom: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info > .input-group{
+  
+  flex-grow: 1;
+}
+
+.user-info > .input-group:first-child{
+
+  margin-right: 20px;
+}
+
+
+.input-group__label{
+
+  margin-bottom: 0.5em;
+}
+
+.input-group__input{
+
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  height: 2em;
+  padding-left: 8px;
+  transition: 0.4s;
+
+}
+
+.input-group__input:focus{
+
+  outline: none ;
+  border:1px solid rgb(129, 0, 161);
+  box-shadow: 0 0 20px #d3007b;
+  
+}
+
+.input-group-textArea__textArea{
+
+  margin-top: 7px;
+  width: 100%;
+  height: 250px;
+  color: rgb(0, 0, 0);
+  resize: none;
+  border-radius: 4px; 
+  border-style:none;
+  font-weight: bold;
+  padding: 10px;
+
+}
+
+.input-group-textArea__textArea:focus{
+
+  outline: none ;
+  border:1px solid rgb(129, 0, 161);
+  box-shadow: 0 0 10px #d3007b;
+
+}
+
+.form-button{
+
+  padding: 15px 100px;
+  background-color:rgba(255, 193, 59, 0.959);
+  border-width: 0;
+  border-radius: 5px;
+  margin-top: 2em;
+  transition: .2s;
+  color: #fff;
+  font-weight: bolder;
+  align-self: center;
+  
+}
+
+.form-button:hover{
+
+  background-color: rgba(87, 0, 168, 0.959);
+  cursor: pointer;
+  color: rgb(180, 168, 0);
+  
+  animation: button_yellow 1s infinite;
+}
+
+.footerContainer{
+
+  width: 100%;
+  height: max-content;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 10%, rgba(54,0,108,1) 50%, rgb(131, 0, 136) 90%);
+
+  color: #fff;
+}
+
+.footer_main{
+
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.footer__left{
+  
+  flex-grow: 0.5;
+  padding: 0 20px 20px 40px;
+  font-size: var(--step-2);
+}
+
+.footer__right{
+
+  flex-grow: 0.5;
+  font-size: var(--step-2);
+  min-width:300px;
+  
+}
+
+.footer__right > .cover__logos{
+
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+@keyframes button_yellow {
+
+  0%{
+
+    background-color:rgba(255, 241, 116, 0.959);
+    box-shadow: 0 0 0 #fff ;
+  }
+
+  50%{
+    background-color:rgba(255, 241, 116, 0.959);
+    box-shadow: 0 0px 10px rgba(255, 241, 116, 0.959), 0 0 20px rgba(255, 241, 116, 0.959), 0 0 40px rgba(255, 241, 116, 0.959);
+  }
+
+  100%{
+    background-color:rgba(255, 241, 116, 0.959);
+    box-shadow: 0 0 0 #fff ;
+  }
 }
 
 @media only screen and (min-width: 850px) {
@@ -796,7 +1001,7 @@ p span::before{
   .CVButton{
 
     display: block;
-    background-color: rgb(223, 134, 0);
+    background-color:rgba(255, 193, 59, 0.959);
     border: none;
     color: #fff;
   
@@ -861,6 +1066,41 @@ p span::before{
 
 }
 
+@media only screen and (max-width: 705px){
+
+  .footer__left{
+    
+    flex-grow: 1;
+    text-align: center;
+
+  }
+
+  .footer__right{
+    
+    flex-grow: 1;
+    
+  }
+
+
+}
+
+@media only screen and (max-width: 668px){
+
+
+  .user-info > .input-group{
+  
+    flex-grow: 1;
+    flex-basis: 300px;
+  
+  }
+  .user-info > .input-group:first-child{
+
+    margin-right: 0;
+  }
+
+
+}
+
 @media only screen and (max-width: 460px) {
 
   .nav__logo{
@@ -882,4 +1122,8 @@ p span::before{
   
   }
 
+  .form-button{
+    padding: 15px 0px;
+    width: 100%;
+  }
 }
