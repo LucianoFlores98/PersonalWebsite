@@ -9,11 +9,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/normalize.css">
 
     <script src="https://kit.fontawesome.com/2b8baf337d.js" crossorigin="anonymous"></script>
 
@@ -326,19 +326,19 @@
                 </div>
 
                 <div class="contact__main">
-                    <form id="contact-form" class="contact__form" method="post" action="mailto:lucianof603@gmail.com">
+                    <form id="contact-form" name="contact-form" class="contact__form" method="post" action="./public/php/form-to-email.php">
 
                         <div class="user-info">
 
                             <div class="input-group">
                                 <label id="name-label" for="name" class="input-group__label">Tu nombre</label>
-                                <input id="name" type="text" class="input-group__input">
+                                <input id="name" name="name" type="text" class="input-group__input" required>
                             </div>
     
                             <div class="input-group">
     
-                                <label id="email-label" for="email" class="input-group__label">Tu Email</label>
-                                <input id="email" type="email" class="input-group__input">
+                                <label id="email-label" name="email-label" for="email" class="input-group__label">Tu Email</label>
+                                <input id="email" type="email" class="input-group__input" required>
             
                             </div>
 
@@ -347,15 +347,15 @@
                         <div class="input-group">
                     
                             <label for="email-subject" class="input-group__label">Asunto</label>
-                            <input id="email-subject" type="text" class="input-group__input">
+                            <input id="email-subject" name="email-subject" type="text" class="input-group__input" required>
         
                         </div>
 
                         <div class="input-group-textArea">
 
-                            <label for="otras_actividades" class="input-group__label">Tu mensaje:</label>
+                            <label for="message" class="input-group__label">Tu mensaje:</label>
         
-                            <textarea name="message" id="otras_actividades" class="input-group-textArea__textArea" rows="5"></textarea>
+                            <textarea name="message" id="message" class="input-group-textArea__textArea" rows="5" required></textarea>
         
                         </div>
 
@@ -390,6 +390,6 @@
 
 </body>
 
-<script src="./scripts.js"></script>
+<script src="./public/js/scripts.js"></script>
 
 </html>

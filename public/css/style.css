@@ -75,7 +75,6 @@ html{
 
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
   font-size: var(--step--2);
 
 }
@@ -163,7 +162,7 @@ html{
 
 }
 
-p > span::before{
+.cover__heading__title > span::before{
   
   content: '';
   text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
@@ -431,7 +430,6 @@ p > span::before{
   border: none;
   color: #fff;
   text-decoration: none;
-  font-weight: normal;
 
 
   padding: 10px 20px;
@@ -443,6 +441,7 @@ p > span::before{
   animation: button_yellow 1s infinite;
   color: rgb(180, 168, 0);
 }
+
 .skills{
 
   display: flex;
@@ -556,7 +555,7 @@ p > span::before{
 
   height:max-content;
   background-color: rgb(0, 0, 0);
-  background-image: url(./Images/triangles_without_shadow.svg);
+  background-image: url(../../Images/triangles_without_shadow.svg);
   color: rgb(255, 255, 255);
 
 }
@@ -685,7 +684,7 @@ p > span::before{
 
 .projectCard__image{
   
-  height: 150px;
+  height: 147px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 
@@ -750,7 +749,6 @@ p > span::before{
   border-style: none;
   background-color: rgb(0, 114, 61);
   color: #fff;
-  font-weight: bolder;
   transition: .4s;
 /*   border-bottom-left-radius: 20px; */
 
@@ -1004,7 +1002,7 @@ p > span::before{
     background-color:rgba(255, 193, 59, 0.959);
     border: none;
     color: #fff;
-  
+
     padding: 10px 20px;
     margin: 20px auto;
   }
