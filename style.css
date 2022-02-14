@@ -820,7 +820,7 @@ p > span::before{
 .contact__main{
 
   height: max-content;
-  width: min(90%,1000px);
+  width: min(95%,1000px);
   margin-inline: auto;
 
 }
@@ -831,12 +831,11 @@ p > span::before{
   flex-direction: column;
   height: max-content;
   padding: 30px 35px;
-  margin: 40px;
   background-color: rgb(0, 0, 0);
   box-shadow: 15px 10px 30px rgba(77, 77, 77, 0.541);
-
   color: #fff;
   font-weight: bold;
+  margin: 30px 0 40px 0;
 }
 
 .user-info{
