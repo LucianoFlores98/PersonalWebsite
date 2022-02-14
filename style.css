@@ -856,6 +856,7 @@ p > span::before{
 .user-info > .input-group{
   
   flex-grow: 1;
+  min-width: 0;
 }
 
 .user-info > .input-group:first-child{
