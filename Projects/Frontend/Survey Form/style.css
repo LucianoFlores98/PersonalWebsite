@@ -24,7 +24,6 @@ body{
     margin: 0 auto;
     max-width: 720px;
     padding-bottom: 3em;
-    margin-bottom: 15em;
 }
 
 .header{
@@ -148,7 +147,8 @@ body{
     width: 100%;
     color: rgb(66, 66, 66);
     resize: none;
-    border-radius: 4px; 
+    border-radius: 4px;
+    background-color: rgba(190, 190, 190, 0.247);
 
 }
 
